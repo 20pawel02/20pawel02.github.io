@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROZDZIAŁ II</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%; /* Poszerzone okno tekstu */
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: url('tlo.png') no-repeat center center/cover;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        header .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        header nav a:hover {
+            background-color: rgba(119, 170, 255, 0.5);
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 10px;
+        }
+        .content h2 {
+            color: #333;
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .content .caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: -10px;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .navigation-buttons a {
+            background-color: #77aaff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navigation-buttons a:hover {
+            background-color: #5599dd;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" height="90">
+        </div>
+        <h1>System zarządzania sesjami RPG</h1>
+        <nav>
+            <a href="dokumentacja_strona_glowna.html">STRONA GŁÓWNA</a>
+            <a href="doku_rozdzial_i.html">Analiza biznesowa</a>
+            <a href="doku_rozdzial_ii.html">Analiza wymagań SI</a>
+            <a href="doku_rozdzial_iii.html">Analiza funkcjonnalna SI</a>
+            <a href="doku_rozdzial_iv.html">Modelowanie analityczne SI</a>
+            <a href="doku_rozdzial_v.html">Projekt modelu danych SI</a>
+            <a href="doku_rozdzial_vi.html">Przykładowy diagram klas</a>
+        </nav>
+    </header>
+	
+    <div class="container">
+        <div class="content">
+            <h1>Rozdział II. Analiza wymagań SI</h1>
+            <p>Analiza biznesowa to proces polegający na zbieraniu, analizie i ocenie informacji związanych z działalnością biznesową w celu zrozumienia jej celów, 
+                wymagań i procesów. Analiza biznesowa ma za zadanie identyfikację problemów, szukanie możliwości ulepszenia oraz opracowanie strategii i rozwiązań, 
+                które przyczynią się do osiągnięcia sukcesu.</p>
+            
+            <h2>Tytuł projektowanego systemu:</h2>
+				<p style="text-indent: 60px;">System Zarządzania Sesjami RPG<p>
+            <h2>Słownik:</h2>
+				<p style="text-indent: 60px;"><b>• DM (ang.Dungeon Master, Mistrz gry)</b> - uczestnik odpowiedzialny za prowadzenie kampanii RPG sprawujący kontrole nad scenariuszami, zdarzeniami i postaciami NPC.</p>
+				<p style="text-indent: 60px;"><b>• Element otoczenia</b> - obiekt wykorzystywany do tworzenia szczegółowego i dynamicznego świata rozgrywki, z którym postacie mogą podejmować interakcje lub wpływać na nie.</p>
+				<p style="text-indent: 60px;"><b>• Gracz</b> - uczestnik kampanii kontrolujący stworzoną przez siebie postać, podejmujący decyzje i rozwijający ją.</p>
+				<p style="text-indent: 60px;"><b>• Kampania</b> – zbiór scenariuszy i wydarzeń składających się na długoterminową serie rozgrywek.</p>
+				<p style="text-indent: 60px;"><b>• NPC (ang.Non-Playable Character)</b> - postać niezależna sterowana przez Mistrza gry mogąca pełnić konkretną funkcje w ramach danego scenariusza i wydarzenia.</p>
+				<p style="text-indent: 60px;"><b>• PC (ang. Player Character)</b> - fikcyjna osoba lub istota, uczestnicząca w kampanii i sterowana przez gracza. Każda postać jest unikalna i ma własny zestaw cech, umiejętności, historii i celów.</p>
+				<p style="text-indent: 60px;"><b>• Scenariusz</b> - pojedyncza konfrontacja między graczami a postaciami NPC, które są kontrolowane przez DMa.</p>
+				<p style="text-indent: 60px;"><b>• Sprawdź dane rozgrywki</b> – Pozwala wyświetlić podstawowe dane rozgrywki, mają do tej opcji dostęp DM i gracze. Zawarte tam na przykład są notatki, postęp kampanii itd.</p>
+				<p style="text-indent: 60px;"><b>• System</b> - to zbiór zasad, mechanik i struktur, które określają, jak gra jest prowadzona i jak gracze oraz DM wchodzą w interakcje z grą.</p>
+				<p style="text-indent: 60px;"><b>• Wydarzenie</b> - interakcja między postacią gracza a podmiotem (mogącym być postacią NPC albo elementem otoczenia) o z góry ustalonym charakterze.</p>
+				<p style="text-indent: 60px;"><b>• Wygeneruj wydarzenie</b> – Pozwala DMowi wygenerować wydarzenie, które dodaje do kampanii, musi podać tylko podstawowe dane np. jakiego rodzaju ma być.</p>
+				<p style="text-indent: 60px;"><b>• Wybierz kampanię</b> – Pozwala graczowi wybrać kampanię i postać, którą będzie ogrywał daną kampanię, widząc przy okazji podstawowe informacje o niej.</p>
+				<p style="text-indent: 60px;"><b>• Zarządzaj kampanią</b> – Pozwala DMowi stworzyć nową kampanię bądź zarządzać istniejącą, Wypełnia najważniejsze dane, które trafiają bezpośrednio do wbudowanej bazy.</p>
+				<p style="text-indent: 60px;"><b>• Zarządzaj postacią</b> – Pozwala wyświetlić listę postaci gracza, ich arkusze, także je importować, modyfikować postacie itd.</p>
+				<p style="text-indent: 60px;"><b>• Zarządzaj scenariuszem</b> – Pozwala DMowi zarządzać scenariuszem, usunąć go dodać, zmodyfikować, przypisać postacie NPC, elementy otoczenia itd.</p>
+				
+            <div class="navigation-buttons">
+                <a href="doku_rozdzial_i.html">Poprzednia strona</a>
+                <a href="doku_rozdzial_iii.html">Następna strona</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>System zarządzania sesjami RPG</p>
+        <p>kierownik Maciej Świder, Tomasz Szewa, Paweł Wróbel</p>
+    </footer>
+</body>
+</html>

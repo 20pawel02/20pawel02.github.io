@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROZDZIAŁ I</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%; /* Poszerzone okno tekstu */
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: url('tlo.png') no-repeat center center/cover;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        header .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        header nav a:hover {
+            background-color: rgba(119, 170, 255, 0.5);
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 10px;
+        }
+        .content h2 {
+            color: #333;
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .content .caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: -10px;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .navigation-buttons a {
+            background-color: #77aaff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navigation-buttons a:hover {
+            background-color: #5599dd;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" height="90">
+        </div>
+        <h1>System zarządzania sesjami RPG</h1>
+		<nav>
+            <a href="doku_strona_glowna.html">STRONA GŁÓWNA</a>
+            <a href="doku_rozdzial_i.html">Analiza biznesowa</a>
+            <a href="doku_rozdzial_ii.html">Analiza wymagań SI</a>
+            <a href="doku_rozdzial_iii.html">Analiza funkcjonnalna SI</a>
+            <a href="doku_rozdzial_iv.html">Modelowanie analityczne SI</a>
+            <a href="doku_rozdzial_v.html">Projekt modelu danych SI</a>
+			<a href="doku_rozdzial_vi.html">Przykładowy diagram klas</a>
+        </nav>
+    </header>
+	
+    <div class="container">
+        <div class="content">
+			<h1>Rozdział I. Analiza biznesowa</h1>
+				<p>Analiza biznesowa to proces polegający na zbieraniu, analizie i ocenie informacji związanych z działalnością biznesową w celu zrozumienia jej celów, 
+					wymagań i procesów. Analiza biznesowa ma za zadanie identyfikację problemów, szukanie możliwości ulepszenia oraz opracowanie strategii i rozwiązań, 
+					które przyczynią się do osiągnięcia sukcesu.</p>
+				
+				<h2>Wstęp teoretyczny</h2>
+				
+					<p>Gry RPG (Role-Playing Games), to dziedzina rozrywki sięgająca lat osiemdziesiątych ubiegłego wieku. Polegają one głównie na oddaniu wodzy wyobraźni, jako że gra się w nie korzystając 
+					   tylko z papieru, ołówka i kości do gry. Jednak nie znaczy to, że każda gra nie ma innych zasad, które jest ciężko zapamiętać, przez dużo ruszających się części. Wszystko zaczyna się 
+					   jednak od kampanii i właśnie systemu w jakim chcemy zagrać. Statystyki postaci, NPC, elementów otoczenia, nawet scenariusze i wydarzenia są rzeczami, o których trzeba ciągle pamiętać, 
+					   albo trzymać zapisane. Celem naszego systemu jest ułatwić ten proces jako, że wszystko będzie łatwo dostępne za kilkoma kliknięciami.</p>
+				
+				<h2>Opis kontekstu dziedziny problemowej (w organizacji) dla której projektowany jest system</h2>
+				
+					<p>Zarządzanie sesją RPG, wymaga wkładu od gracza i DMa (Dungeon Mastera). DM ma za zadanie zarządzanie kampanią, której częścią jest sesja, a także generowanie wydarzeń i zarządzanie scenariuszami, 
+					   występującymi w niej. Zadaniem  gracza za to jest dołączenie do kampanii i zarządzanie postacią, podczas sesji i ogólnego trwania kampanii. Oba rodzaje użytkownika są w stanie w dowolnym momencie 
+					   sprawdzić potrzebne dane, jako że system ma zastąpić tradycyjne zapisywanie wspomnianych wcześniej danych na papierze.</p>
+				
+				<h2>Opis wymagań funkcjonalnych:</h2>
+				
+				<h3 style="text-indent: 30px;">1.	Zarządzanie kampanią:</h3>
+					<p style="text-indent: 60px;">• Wszystkie te akcje dostępne są tylko dla DMa.</p>
+					<p style="text-indent: 60px;">• Możliwość utworzenia nowej kampanii, nadanie jej nazwy utworzenie prostego opisu, wybór systemu</p>
+					<p style="text-indent: 60px;">• Zarządzanie ilością postaci i generowanie zaproszeń dla graczy.</p>
+					<p style="text-indent: 60px;">• Możliwość dodania wstępnych scenariuszy bądź wydarzeń.</p>
+				
+				<h3 style="text-indent: 30px;">2.	Generowanie wydarzeń:</h3>
+					<p style="text-indent: 60px;">• Wybierz podmiot wydarzenia (postać NPC) i cel (postać gracza).</p>
+					<p style="text-indent: 60px;">• Wybranie rodzaju wydarzenia, możliwe są pozytywne, negatywne lub neutralne.</p>
+					<p style="text-indent: 60px;">• Możliwość zapisania krótkiego opisu.</p>
+					
+					
+				<h3 style="text-indent: 30px;">3.	Zarządzanie scenariuszami:</h3>
+					<p style="text-indent: 60px;">• Możliwość wczytania gotowego scenariusza bądź utworzenie kompletnie nowego w kreatorze. </p>
+					<p style="text-indent: 60px;">• Zarządzanie postaciami NPC, dodawanie, usuwanie, przypisanie ich arkusza.</p>
+					<p style="text-indent: 60px;">• Zarządzanie elementami otoczenia, tutaj także dodawanie, usuwanie, ich arkusz.</p>
+					<p style="text-indent: 60px;">• Możliwość dodania jednego lub więcej zakończeń danego scenariusza, tutaj wpisywany jest ich krótki opis.</p>
+					
+				<h3 style="text-indent: 30px;">4.	Zarządzanie postaciami:</h3>
+					<p style="text-indent: 60px;">• Gracz może tutaj dodać nową postać, usunąć lub zmodyfikować jej arkusz.</p>
+					<p style="text-indent: 60px;">• Jest także w stanie wyświetlić listę postaci i wybrać jedną z nich do zagrania w określonej kampanii, bądź ją właśnie usunąć.</p>
+				
+				<h3 style="text-indent: 30px;">5.	Analiza dostępnych danych rozgrywki:</h3>
+					<p style="text-indent: 60px;">• Gracz jak i DM są w stanie sprawdzić najważniejsze dane rozgrywki.</p>
+					<p style="text-indent: 60px;">• Są to na przykład aktualna kampania, a w niej scenariusze i wydarzenia, leksykon z zasadami, notatki gracza, statystyki i osiągnięcia (w formie notatki), dane postaci.</p>
+					
+				<h3 style="text-indent: 30px;">•	Kontekstowy diagram DPU – (Diagram 1)</h3>
+				
+				<figure>
+					<img src="i1.png" alt="Opis obrazu">
+					<figcaption>Diagram 1. Diagram kontekstowy</figcaption>
+				</figure>
+				
+				<div class="navigation-buttons">
+					<a href="dokumentacja_strona_glowna.html">Poprzednia strona</a>
+					<a href="doku_rozdzial_ii.html">Następna strona</a>
+					
+				</div>
+		</div>
+	</div>
+	
+	<footer>
+		<p>System zarządzania sesjami RPG</p>
+		<p>kierownik Maciej Świder, Tomasz Szewa, Paweł Wróbel</p>
+    </footer>
+</body>
+</html>
